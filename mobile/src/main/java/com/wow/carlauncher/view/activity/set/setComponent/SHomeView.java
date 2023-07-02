@@ -79,13 +79,13 @@ public class SHomeView extends SetBaseView {
 
     @Override
     public String getName() {
-        return "首页设置";
+        return ""+R.string.settings_home;
     }
 
     protected void initView() {
 
         sv_item_interval.setSummary(ItemInterval.getById(SharedPreUtil.getInteger(SDATA_LAUNCHER_ITEM_INTERVAL, ItemInterval.XIAO.getId())).getName());
-        sv_item_interval.setOnClickListener(new SetSingleSelectView<ItemInterval>(getActivity(), "请选择首页卡片间隔") {
+        sv_item_interval.setOnClickListener(new SetSingleSelectView<ItemInterval>(getActivity(), ""+R.string.settings_home_map_interval) {
             @Override
             public Collection<ItemInterval> getAll() {
                 return Arrays.asList(CommonData.ITEM_INTERVALS);
@@ -100,9 +100,12 @@ public class SHomeView extends SetBaseView {
             public boolean onSelect(ItemInterval setEnum) {
                 SharedPreUtil.saveInteger(SDATA_LAUNCHER_ITEM_INTERVAL, setEnum.getId());
                 sv_item_interval.setSummary(setEnum.getName());
-                new AlertDialog.Builder(getContext()).setTitle("确认").setNegativeButton("下次重启", null).setPositiveButton("立即生效", (dialog, which) -> {
-                    EventBus.getDefault().post(new SEventRequestLauncherRecreate());
-                }).setMessage("是否立即生效,立即生效首页将会重新加载").show();
+                new AlertDialog.Builder(getContext())
+                    .setTitle(R.string.settings_home_confirm)
+                    .setNegativeButton(R.string.settings_home_confirm_restart, null)
+                    .setPositiveButton(R.string.settings_home_confirm_now, (dialog, which) -> {
+                        EventBus.getDefault().post(new SEventRequestLauncherRecreate());
+                    }).setMessage(R.string.settings_home_confirm_will_restart).show();
                 return true;
             }
         });
@@ -117,7 +120,10 @@ public class SHomeView extends SetBaseView {
 
 
         sv_home_layout.setSummary(LayoutEnum.getById(SharedPreUtil.getInteger(SDATA_LAUNCHER_LAYOUT, LayoutEnum.AUTO.getId())).getName());
-        sv_home_layout.setOnClickListener(new SetSingleSelectView<LayoutEnum>(getActivity(), "请选择首页的布局") {
+        sv_home_layout.setOnClickListener(
+            new SetSingleSelectView<LayoutEnum>(getActivity(),
+                ""+R.string.settings_home_select_layout
+            ) {
             @Override
             public Collection<LayoutEnum> getAll() {
                 return Arrays.asList(CommonData.LAUNCHER_LAYOUTS);
@@ -140,15 +146,21 @@ public class SHomeView extends SetBaseView {
         sv_home_full.setOnValueChangeListener(new SetSwitchOnClickListener(CommonData.SDATA_HOME_FULL) {
             @Override
             public void newValue(boolean value) {
-                new AlertDialog.Builder(getContext()).setTitle("确认").setNegativeButton("下次重启", null).setPositiveButton("立即生效", (dialog, which) -> {
-                    EventBus.getDefault().post(new SEventRequestLauncherRecreate());
-                }).setMessage("是否立即生效,立即生效首页将会重新加载").show();
+                new AlertDialog.Builder(getContext()).setTitle(R.string.settings_home_confirm)
+                    .setNegativeButton(R.string.settings_home_confirm_restart, null)
+                    .setPositiveButton(R.string.settings_home_confirm_now, (dialog, which) -> {
+                        EventBus.getDefault().post(new SEventRequestLauncherRecreate());
+                    }).setMessage(R.string.settings_home_confirm_will_restart).show();
             }
         });
         sv_home_full.setChecked(SharedPreUtil.getBoolean(CommonData.SDATA_HOME_FULL, true));
 
         sv_item_tran.setSummary(ItemTransformer.getById(SharedPreUtil.getInteger(SDATA_LAUNCHER_ITEM_TRAN, ItemTransformer.None.getId())).getName());
-        sv_item_tran.setOnClickListener(new SetSingleSelectView<ItemTransformer>(getActivity(), "请选择首页切换动画") {
+        sv_item_tran.setOnClickListener(
+            new SetSingleSelectView<ItemTransformer>(
+                getActivity(),
+                ""+R.string.settings_home_select_animation
+            ) {
             @Override
             public Collection<ItemTransformer> getAll() {
                 return Arrays.asList(CommonData.LAUNCHER_ITEMS_TRANS);
@@ -169,7 +181,13 @@ public class SHomeView extends SetBaseView {
         });
 
         sv_launcher_item_num.setSummary(SharedPreUtil.getInteger(CommonData.SDATA_LAUNCHER_ITEM_NUM, 3) + "个");
-        sv_launcher_item_num.setOnClickListener(new SetNumSelectView(getActivity(), "请选择首页的插件数量", "个", 2, 5) {
+        sv_launcher_item_num.setOnClickListener(new SetNumSelectView(
+            getActivity(),
+            ""+R.string.settings_home_select_modules_num,
+            "",
+            2,
+            5
+        ) {
             @Override
             public Integer getCurr() {
                 return SharedPreUtil.getInteger(CommonData.SDATA_LAUNCHER_ITEM_NUM, 3);
@@ -184,26 +202,34 @@ public class SHomeView extends SetBaseView {
         });
 
         sv_launcher_item_sort_re.setOnClickListener(v -> {
-            new AlertDialog.Builder(getContext()).setTitle("警告!").setNegativeButton("取消", null).setPositiveButton("确定", (dialog2, which2) -> {
+            new AlertDialog.Builder(getContext()).setTitle(R.string.settings_home_warn)
+                .setNegativeButton(R.string.cancel, null)
+                .setPositiveButton(R.string.confirm, (dialog2, which2) -> {
                 for (ItemEnum item : CommonData.LAUNCHER_ITEMS) {
                     SharedPreUtil.saveInteger(CommonData.SDATA_LAUNCHER_ITEM_SORT_ + item.getId(), item.getId());
                     SharedPreUtil.saveBoolean(CommonData.SDATA_LAUNCHER_ITEM_OPEN_ + item.getId(), true);
                 }
                 EventBus.getDefault().post(new LItemRefreshEvent());
-            }).setMessage("是否确认更改,会导致桌面插件重新加载").show();
+            }).setMessage(R.string.settings_home_confirm_will_restart).show();
         });
 
         sv_launcher_item_sort.setOnClickListener(v -> {
             final LauncherItemAdapter adapter = new LauncherItemAdapter(getContext());
-            AlertDialog dialog = new AlertDialog.Builder(getContext()).setTitle("调整插件顺序").setNegativeButton("取消", null).setPositiveButton("确定", (dialog1, which1) -> {
-                new AlertDialog.Builder(getContext()).setTitle("警告!").setNegativeButton("取消", null).setPositiveButton("确定", (dialog2, which2) -> {
+            AlertDialog dialog = new AlertDialog.Builder(getContext())
+                    .setTitle(R.string.settings_home_warn)
+                    .setNegativeButton(R.string.cancel, null)
+                    .setPositiveButton(R.string.confirm, (dialog1, which1) -> {
+                new AlertDialog.Builder(getContext())
+                    .setTitle(R.string.settings_home_warn)
+                    .setNegativeButton(R.string.cancel, null)
+                    .setPositiveButton(R.string.confirm, (dialog2, which2) -> {
                     List<ItemModel> items = adapter.getItems();
                     for (ItemModel item : items) {
                         SharedPreUtil.saveInteger(CommonData.SDATA_LAUNCHER_ITEM_SORT_ + item.info.getId(), item.index);
                         SharedPreUtil.saveBoolean(CommonData.SDATA_LAUNCHER_ITEM_OPEN_ + item.info.getId(), item.check);
                     }
                     EventBus.getDefault().post(new LItemRefreshEvent());
-                }).setMessage("是否确认更改,会导致桌面插件重新加载").show();
+                }).setMessage(R.string.settings_home_confirm_will_restart).show();
             }).setAdapter(adapter, null).show();
 
             WindowManager.LayoutParams lp = dialog.getWindow().getAttributes();

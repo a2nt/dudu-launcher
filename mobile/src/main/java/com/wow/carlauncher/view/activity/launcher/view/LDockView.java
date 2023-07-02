@@ -160,7 +160,7 @@ public class LDockView extends BaseThemeView {
 
     private void openDock(String clazz) {
         if (!AppInfoManage.self().openApp(clazz)) {
-            ToastManage.self().show("APP打开失败,可能需要重新选择");
+            ToastManage.self().show(""+R.string.dock_view_app_noopen);
         }
     }
 
@@ -171,7 +171,7 @@ public class LDockView extends BaseThemeView {
             tv_dock1.setText(AppInfoManage.self().getName(packname1));
         } else {
             iv_dock1.setImageResource(R.drawable.theme_add_app);
-            tv_dock1.setText("添加");
+            tv_dock1.setText(R.string.dock_view_add);
             if (remove) {
                 SharedPreUtil.saveString(SDATA_DOCK1_CLASS, "");
             }
@@ -182,7 +182,7 @@ public class LDockView extends BaseThemeView {
             tv_dock2.setText(AppInfoManage.self().getName(packname2));
         } else {
             iv_dock2.setImageResource(R.drawable.theme_add_app);
-            tv_dock2.setText("添加");
+            tv_dock2.setText(R.string.dock_view_add);
             if (remove) {
                 SharedPreUtil.saveString(SDATA_DOCK2_CLASS, "");
             }
@@ -194,7 +194,7 @@ public class LDockView extends BaseThemeView {
             tv_dock3.setText(AppInfoManage.self().getName(packname3));
         } else {
             iv_dock3.setImageResource(R.drawable.theme_add_app);
-            tv_dock3.setText("添加");
+            tv_dock3.setText(R.string.dock_view_add);
             if (remove) {
                 SharedPreUtil.saveString(SDATA_DOCK3_CLASS, "");
             }
@@ -206,7 +206,7 @@ public class LDockView extends BaseThemeView {
             tv_dock4.setText(AppInfoManage.self().getName(packname4));
         } else {
             iv_dock4.setImageResource(R.drawable.theme_add_app);
-            tv_dock4.setText("添加");
+            tv_dock4.setText(R.string.dock_view_add);
             if (remove) {
                 SharedPreUtil.saveString(SDATA_DOCK4_CLASS, "");
             }
@@ -217,7 +217,7 @@ public class LDockView extends BaseThemeView {
             tv_dock5.setText(AppInfoManage.self().getName(packname5));
         } else {
             iv_dock5.setImageResource(R.drawable.theme_add_app);
-            tv_dock5.setText("添加");
+            tv_dock5.setText(R.string.dock_view_add);
             if (remove) {
                 SharedPreUtil.saveString(SDATA_DOCK5_CLASS, "");
             }
@@ -308,7 +308,7 @@ public class LDockView extends BaseThemeView {
         final List<AppInfo> appInfos = new ArrayList<>(AppInfoManage.self().getAllAppInfos());
         SelectAppAdapter adapter = new SelectAppAdapter(getContext());
         adapter.addItems(appInfos);
-        new AlertDialog.Builder(getContext()).setTitle("请选择APP")
+        new AlertDialog.Builder(getContext()).setTitle(R.string.dock_view_app_select)
                 .setAdapter(adapter, (dialog, which) -> {
                     AppInfo appInfo = appInfos.get(which);
                     SharedPreUtil.saveString(key, appInfo.appMark + CommonData.CONSTANT_APP_PACKAGE_SEPARATE + appInfo.clazz);

@@ -55,7 +55,7 @@ public class CarInfoActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        setTitle("车辆信息");
+        setTitle(R.string.car_info_title);
 
         onEventCall(ObdPlugin.self().getCurrentPObdEventCarInfo());
         onEventCall(ObdPlugin.self().getCurrentPObdEventCarTp());
@@ -64,14 +64,14 @@ public class CarInfoActivity extends BaseActivity {
 
     private void refreshObdState() {
         if (ObdPlugin.self().isConnect()) {
-            setTitle("OBD(已连接)");
+            setTitle(R.string.car_info_obd_on);
             if (ObdPlugin.self().supportTp()) {
-                tv_tp_title.setText("胎压数据:");
+                tv_tp_title.setText(R.string.car_info_obd_tpms);
             } else {
-                tv_tp_title.setText("胎压数据(不支持):");
+                tv_tp_title.setText(R.string.car_info_obd_tpms_bad);
             }
         } else {
-            setTitle("OBD(未连接)");
+            setTitle(R.string.car_info_obd_off);
         }
     }
 
@@ -83,19 +83,19 @@ public class CarInfoActivity extends BaseActivity {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventCall(final PObdEventCarInfo event) {
         if (event.getSpeed() != null) {
-            String msg = "车速:" + event.getSpeed() + "KM/H";
+            String msg = R.string.car_info_speed + event.getSpeed().toString() + R.string.car_info_speed_kmh;
             tv_info_speed.setText(msg);
         }
         if (event.getRev() != null) {
-            String msg = "转速:" + event.getRev() + "R/S";
+            String msg = R.string.car_info_engine + event.getRev().toString() + R.string.car_info_engine_rpm;
             tv_info_rev.setText(msg);
         }
         if (event.getWaterTemp() != null) {
-            String msg = "水温:" + event.getWaterTemp() + "℃";
+            String msg = R.string.car_info_watter_temp + event.getWaterTemp() + "℃";
             tv_info_wtemp.setText(msg);
         }
         if (event.getOilConsumption() != null) {
-            String msg = "油量:" + event.getOilConsumption() + "%";
+            String msg = R.string.car_info_oil_consumption + event.getOilConsumption() + "%";
             tv_info_oil.setText(msg);
         }
     }
@@ -103,20 +103,20 @@ public class CarInfoActivity extends BaseActivity {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventCall(final PObdEventCarTp event) {
         if (event.getlFTirePressure() != null && event.getlFTemp() != null) {
-            String msg = "左前轮:" + String.format(Locale.CHINA, "%.1f", event.getlFTirePressure()) + "/" + event.getlFTemp() + "℃";
+            String msg =  R.string.car_info_tpms_lf + String.format(Locale.CHINA, "%.1f", event.getlFTirePressure()) + "/" + event.getlFTemp() + "℃";
             tv_tp_lf.setText(msg);
         }
         if (event.getlBTemp() != null && event.getlBTirePressure() != null) {
-            String msg = "左后轮:" + String.format(Locale.CHINA, "%.1f", event.getlBTirePressure()) + "/" + event.getlBTemp() + "℃";
+            String msg = R.string.car_info_tpms_lb + String.format(Locale.CHINA, "%.1f", event.getlBTirePressure()) + "/" + event.getlBTemp() + "℃";
             tv_tp_lb.setText(msg);
         }
 
         if (event.getrFTirePressure() != null && event.getrFTemp() != null) {
-            String msg = "右前轮:" + String.format(Locale.CHINA, "%.1f", event.getrFTirePressure()) + "/" + event.getrFTemp() + "℃";
+            String msg = R.string.car_info_tpms_rf + String.format(Locale.CHINA, "%.1f", event.getrFTirePressure()) + "/" + event.getrFTemp() + "℃";
             tv_tp_rf.setText(msg);
         }
         if (event.getrBTirePressure() != null && event.getrBTemp() != null) {
-            String msg = "右后轮:" + String.format(Locale.CHINA, "%.1f", event.getrBTirePressure()) + "/" + event.getrBTemp() + "℃";
+            String msg = R.string.car_info_tpms_rb + String.format(Locale.CHINA, "%.1f", event.getrBTirePressure()) + "/" + event.getrBTemp() + "℃";
             tv_tp_rb.setText(msg);
         }
     }

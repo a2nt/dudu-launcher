@@ -42,7 +42,7 @@ public class SDrivingView extends SetBaseView {
 
     @Override
     public String getName() {
-        return "驾驶界面设置";
+        return "" + R.string.settings_drive;
     }
 
     @BindView(R.id.sv_driving_type)

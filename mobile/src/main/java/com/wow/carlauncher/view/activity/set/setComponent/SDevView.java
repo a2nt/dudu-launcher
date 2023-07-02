@@ -32,6 +32,6 @@ public class SDevView extends SetBaseView {
     }
     @Override
     public String getName() {
-        return "开发设置";
+        return "" + R.string.settings_dev;
     }
 }

@@ -247,7 +247,7 @@ public class LAMapView extends BaseThemeView {
             case R.id.rl_base: {
                 Intent appIntent = getContext().getPackageManager().getLaunchIntentForPackage(AMAP_PACKAGE);
                 if (appIntent == null) {
-                    Toast.makeText(getContext(), "没有安装高德地图", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), R.string.map_view_no_map, Toast.LENGTH_SHORT).show();
                     break;
                 }
                 appIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

@@ -1,57 +1,102 @@
 <resources>
 
-    <string name="app_name">嘟嘟桌面</string>
-    <string name="bg_main_btn_add">添加</string>
-    <string name="bg_main_btn_all">全部</string>
-    <string name="music_title">音乐</string>
-    <string name="music_name">音乐名称</string>
-    <string name="music_album">音乐专辑</string>
+    <string name="app_name">DuDu</string>
+    <string name="app_about">
+        Прежде всего, спасибо всем вам за вашу поддержку. У автора ограничено время, и он старается изо всех сил удовлетворить требования каждого.
+        Программное обеспечение полностью с открытым исходным кодом, пожалуйста, перейдите в группу QQ exchange для получения исходного кода
+        Для любой измененной версии, пожалуйста, сохраните вышеуказанную информацию и добавьте инструкции по модификации ниже!
+        QQ交流群：109799213
+        作者QQ:1012434956
+        Версия:
+    </string>
+    <string name="bg_main_btn_add">Добавить</string>
+    <string name="bg_main_btn_all">Все</string>
+    <string name="music_title">Музыка</string>
+    <string name="music_name">Название</string>
+    <string name="music_album">Альбом</string>
 
-    <string name="time_title">时间</string>
+    <string name="time_title">Время</string>
 
-    <string name="iv_main_dock_icon">首页dock图标</string>
-    <string name="iv_plugin_menu">插件菜单</string>
-    <string name="iv_plugin_music_cover">音乐封面</string>
-    <string name="iv_plugin_music_play">音乐播放</string>
-    <string name="iv_plugin_music_pre">音乐上一首</string>
-    <string name="iv_plugin_music_next">音乐下一首</string>
+    <string name="iv_main_dock_icon">Иконка в доке</string>
+    <string name="iv_plugin_menu">Плагин</string>
+    <string name="iv_plugin_music_cover">Обложка</string>
+    <string name="iv_plugin_music_play">Играть</string>
+    <string name="iv_plugin_music_pre">Назад</string>
+    <string name="iv_plugin_music_next">Вперёд</string>
 
-    <string name="set_allow">允许</string>
-    <string name="set_ban">禁止</string>
-    <string name="set_show">显示</string>
-    <string name="set_hide">隐藏</string>
-    <string name="set_yes">是</string>
-    <string name="set_no">否</string>
+    <string name="set_allow">Разрешить</string>
+    <string name="set_ban">Заблокировать</string>
+    <string name="set_show">Показать</string>
+    <string name="set_hide">Скрыть</string>
+    <string name="set_yes">Да</string>
+    <string name="set_no">Нет</string>
 
-    <string name="iv_content">图片</string>
-    <string name="appwidget_text">EXAMPLE</string>
-    <string name="add_widget">Add widget</string>
+    <string name="iv_content">Картинка</string>
+    <string name="appwidget_text">Пример</string>
+    <string name="add_widget">Добавить вилжет</string>
 
-    <string name="obd_not_connect">OBD没有连接</string>
-    <string name="obd_not_tp">OBD设备不支持胎压</string>
+    <string name="obd_not_connect">OBD не подключен</string>
+    <string name="obd_not_tp">OBD не поддерживает давление в шинах</string>
 
     <string name="driving_cool_black_tp">%1$.1f/%2$d°</string>
     <string name="driving_cool_black_tp_nodata">0.0</string>
-    <string name="trip_merge_time_message">OBD两次读取转速不为0的时间间隔 %1$d 分钟,默认为同一行程</string>
+    <string name="trip_merge_time_message">OBD интервал времени между двумя показаниями со скоростью не %1$d по умолчанию используется одинаковый</string>
 
     <string name="launcher_tp">%1$s\n%2$.1f\n%3$d℃</string>
 
-    <string name="pull_to_refresh_pull_label">下拉刷新</string>
-    <string name="pull_to_refresh_release_label">松开后刷新</string>
-    <string name="pull_to_refresh_refreshing_label">刷新\u2026</string>
-    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
-    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
-    <string name="pull_to_refresh_footer_refreshing_label">加载中\u2026</string>
+    <string name="pull_to_refresh_pull_label">Потяните для обновления</string>
+    <string name="pull_to_refresh_release_label">Отпустите для обновления</string>
+    <string name="pull_to_refresh_refreshing_label">Обновляю\u2026</string>
+    <string name="pull_to_refresh_footer_release_label">Отпустите для обновления</string>
+    <string name="pull_to_refresh_footer_pull_label">Потяните вверх чтобы загрузить больше</string>
+    <string name="pull_to_refresh_footer_refreshing_label">Загрузка\u2026</string>
 
-    <string name="theme_name">默认</string>
-    <string name="theme_item_title_align">center</string>
-    <string name="theme_item_music_cover_type">rect</string>
+    <string name="theme_name">По умолчанию</string>
+    <string name="theme_item_title_align">в центре</string>
+    <string name="theme_item_music_cover_type">Прямоугольник</string>
 
-    <string name="theme_item_amap_daohang_line">hide</string>
-    <string name="theme_item_amap_xunhang_line">hide</string>
+    <string name="theme_item_amap_daohang_line">скрыть</string>
+    <string name="theme_item_amap_xunhang_line">скрыть</string>
     <string name="theme_item_weather_layout">layout1</string>
-    <string name="theme_use_wallpaper">no</string>
+    <string name="theme_use_wallpaper">нет</string>
     <string name="theme_launcher_layout">layout1</string>
 
     <string name="theme_amap_btn_layout">layout1</string>
+
+    <string name="car_info_title">Информация о ТС</string>
+    <string name="car_info_obd_on">OBD подключен</string>
+    <string name="car_info_obd_tpms">Давление в шинах:</string>
+    <string name="car_info_obd_tpms_bad">Давление в шинах не поддерживается:</string>
+    <string name="car_info_obd_off">OBD не подключен</string>
+    <string name="car_info_speed">Скорость:</string>
+    <string name="car_info_speed_kmh">км/ч</string>
+    <string name="car_info_engine">Обороты:</string>
+    <string name="car_info_engine_rpm">о/сек</string>
+    <string name="car_info_watter_temp">Охлаждающая жидкость:</string>
+    <string name="car_info_oil_consumption">Потребление масла:</string>
+
+    <string name="car_info_tpms_lf">Левое переднее:</string>
+    <string name="car_info_tpms_lb">Левое заднее:</string>
+    <string name="car_info_tpms_rf">Правое переднее:</string>
+    <string name="car_info_tpms_rb">Правое заднее:</string>
+
+    <string name="settings_dev">Разработка</string>
+    <string name="settings_drive">Управление</string>
+    <string name="settings_home">Домашняя страница</string>
+    <string name="settings_home_map_interval">Интервал обновления карты</string>
+    <string name="settings_home_confirm">Подтвердить</string>
+    <string name="settings_home_confirm_restart">Перезапустить</string>
+    <string name="settings_home_confirm_now">Принять</string>
+    <string name="settings_home_confirm_will_restart">Домашняя страница будет перезапущена</string>
+    <string name="settings_home_select_layout">Выберите макет домашней страницы</string>
+    <string name="settings_home_select_animation">Выберите анимацию домашней страницы</string>
+    <string name="settings_home_select_modules_num">Выберите кол-во модулей домашней страницы</string>
+    <string name="settings_home_warn">Внимание!</string>
+    <string name="cancel">Отмена</string>
+    <string name="confirm">Принять</string>
+    <string name="dock_view_app_noopen">Пусто</string>
+    <string name="dock_view_add">Не получилось открыть приложение</string>
+    <string name="dock_view_app_select">Пожалуйста, выберите приложение</string>
+
+    <string name="map_view_no_map">Пусто</string>
 </resources>
