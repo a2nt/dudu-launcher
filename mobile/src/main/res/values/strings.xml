@@ -95,7 +95,7 @@
     <string name="cancel">Отмена</string>
     <string name="confirm">Принять</string>
     <string name="dock_view_app_noopen">Пусто</string>
-    <string name="dock_view_add">Не получилось открыть приложение</string>
+    <string name="dock_view_add">Добавить</string>
     <string name="dock_view_app_select">Пожалуйста, выберите приложение</string>
 
     <string name="map_view_no_map">Пусто</string>

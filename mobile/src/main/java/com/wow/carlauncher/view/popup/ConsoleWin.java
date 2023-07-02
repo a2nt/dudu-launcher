@@ -453,7 +453,7 @@ public class ConsoleWin {
         if (time1 != cur_min) {
             cur_min = time1;
             Date d = new Date();
-            tv_time.setText(DateUtil.dateToString(d, "yyyy年MM月dd日 HH:mm"));
+            tv_time.setText(DateUtil.dateToString(d, "dd.MM.yyyy HH:mm"));
         }
     }
 

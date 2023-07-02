@@ -271,7 +271,7 @@ public class LPromptView extends BaseThemeView {
         if (time1 != cur_min) {
             cur_min = time1;
             Date d = new Date();
-            String date = DateUtil.dateToString(d, "yyyy年 MM月 dd日 " + DateUtil.getWeekOfDate(d) + " HH:mm");
+            String date = DateUtil.dateToString(d, "dd.MM.yyyy " + DateUtil.getWeekOfDate(d) + " HH:mm");
             this.tv_time.setText(date);
         }
     }

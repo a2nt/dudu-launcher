@@ -21,7 +21,7 @@
             android:gravity="center"
             android:includeFontPadding="false"
             android:lines="1"
-            android:text="时间"
+            android:text="@string/time_title"
             android:textColor="@color/theme_item_title"
             app:layout_marginLeftPercent="25%h"
             app:layout_marginRightPercent="25%h"

@@ -98,7 +98,7 @@ public class LTimeView extends BaseThemeView {
             if (time1 != cur_day) {
                 cur_day = time1;
                 if (tv_day != null) {
-                    tv_day.setText(DateUtil.dateToString(d, "yyyy年MM月dd日"));
+                    tv_day.setText(DateUtil.dateToString(d, "dd.MM.yyyy"));
                 }
                 if (tv_week != null) {
                     tv_week.setText(DateUtil.getWeekOfDate(d));

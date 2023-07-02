@@ -3,6 +3,7 @@ package com.wow.carlauncher.view.activity.launcher;
 import android.content.Context;
 import android.view.View;
 
+import com.wow.carlauncher.R;
 import com.wow.carlauncher.view.activity.launcher.view.LAMapView;
 import com.wow.carlauncher.view.activity.launcher.view.LMusicView;
 import com.wow.carlauncher.view.activity.launcher.view.LObdView;
@@ -19,7 +20,7 @@ public enum ItemEnum implements SetEnum {
     WEATHER("天气", 3),
     TAIYA("胎压", 4),
     OBD("车况", 5),
-    TIME("时间", 6),
+    TIME(String.valueOf(R.string.time_title), 6),
     DUDUFM("嘟嘟FM", 7),
     PERSION("个人中心", 8);
     private String name;
