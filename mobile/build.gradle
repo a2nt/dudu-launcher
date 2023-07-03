@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.wow.carlauncher"
         minSdkVersion 16
-        targetSdkVersion 33
+        targetSdkVersion 28
         versionCode 2011007
-        versionName "2.011"
+        versionName "2.111"
         //规则就是前4位是2.009,后面三位是小版本
         javaCompileOptions {
             annotationProcessorOptions {
@@ -30,7 +30,7 @@ android {
             keyPassword "123456"
             //MD5: 0B:8B:23:E2:EC:CC:6B:AC:0B:9C:4D:C3:C9:A1:7F:80
             //SHA1: EB:0A:BE:9C:41:CD:C6:A6:91:29:FC:74:F1:B3:48:10:E5:A4:9C:38
-            //SHA256: 75:BD:A6:13:1C:F2:2B:0A:3B:06:34:A5:97:A3:87:86:46:1C:68:2A:20:6B:FC:07:33:BA:27:CC:98:D5:97:A9
+            //SHA256: 75:BD:A6:13:1C:F2:2B:0A:3B:06:34:A5:97:A3:87:86:46:1C:68:2A:20:6B:FC:07:26:BA:27:CC:98:D5:97:A9
         }
     }
 
@@ -57,10 +57,6 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.9'
     //json解析
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    //implementation 'com.google.android.material:material:1.9.0'
-    //implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    //androidTestImplementation 'androidx.annotation:annotation:1.6.0'
-    //implementation 'com.android.support:support-annotations:33.0.0'
     //百分比布局
     implementation 'com.zhy:percent-support-extends:1.1.1'
     //蓝牙
