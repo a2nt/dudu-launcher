@@ -138,7 +138,7 @@
                     android:layout_height="0dp"
                     android:contentDescription="@string/app_name"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/theme_ic_prev"
+                    app:srcCompat="@drawable/theme_ic_prev"
                     app:layout_heightPercent="70%h"
                     app:layout_widthPercent="70%h" />
 
@@ -174,7 +174,7 @@
                     android:layout_height="0dp"
                     android:contentDescription="@string/app_name"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/theme_ic_next"
+                    app:srcCompat="@drawable/theme_ic_next"
                     app:layout_heightPercent="70%h"
                     app:layout_widthPercent="70%h" />
             </com.wow.carlauncher.common.theme.TLinearLayout>

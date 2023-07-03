@@ -1,4 +1,4 @@
-<?xml version="1" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <com.wow.carlauncher.common.theme.TRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -24,35 +24,35 @@
             android:id="@+id/iv_vss_cursor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@mipmap/driving_blue_center_vss_cursor"
+            app:srcCompat="@mipmap/driving_blue_center_vss_cursor"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/iv_fuel_cursor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@mipmap/driving_blue_center_fuel_cursor"
+            app:srcCompat="@mipmap/driving_blue_center_fuel_cursor"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/iv_fuel_mask"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@mipmap/driving_blue_center_fuel_mask"
+            app:srcCompat="@mipmap/driving_blue_center_fuel_mask"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/iv_rpm_mask"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@mipmap/driving_blue_center_rpm_mask"
+            app:srcCompat="@mipmap/driving_blue_center_rpm_mask"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/iv_rpm_cursor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@mipmap/driving_blue_center_rpm_cursor"
+            app:srcCompat="@mipmap/driving_blue_center_rpm_cursor"
             android:visibility="gone" />
 
         <com.wow.carlauncher.common.theme.TRelativeLayout
@@ -223,7 +223,7 @@
                     android:layout_height="0dp"
                     android:layout_alignParentLeft="true"
                     android:padding="10dp"
-                    android:src="@drawable/hud_sou9"
+                    app:srcCompat="@drawable/hud_sou9"
                     app:layout_heightPercent="70%h"
                     app:layout_marginPercent="10%h"
                     app:layout_widthPercent="70%h" />
@@ -366,12 +366,12 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@mipmap/driving_blue_tp_vehicle" />
+                            app:srcCompat="@mipmap/driving_blue_tp_vehicle" />
 
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@mipmap/driving_blue_tp_normal" />
+                            app:srcCompat="@mipmap/driving_blue_tp_normal" />
 
                     </FrameLayout>
                 </com.wow.carlauncher.common.theme.TRelativeLayout>
@@ -425,7 +425,7 @@
                             android:id="@+id/music_iv_prew"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:src="@mipmap/ic_prev2_b"
+                            app:srcCompat="@mipmap/ic_prev2_b"
                             app:layout_heightPercent="50%h"
                             app:layout_widthPercent="50%h" />
                     </com.wow.carlauncher.common.theme.TLinearLayout>
@@ -441,7 +441,7 @@
                             android:id="@+id/music_iv_play"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:src="@mipmap/ic_play2_b"
+                            app:srcCompat="@mipmap/ic_play2_b"
                             app:layout_heightPercent="50%h"
                             app:layout_widthPercent="50%h" />
                     </com.wow.carlauncher.common.theme.TLinearLayout>
@@ -457,7 +457,7 @@
                             android:id="@+id/music_iv_next"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:src="@mipmap/ic_next2_b"
+                            app:srcCompat="@mipmap/ic_next2_b"
                             app:layout_heightPercent="50%h"
                             app:layout_widthPercent="50%h" />
                     </com.wow.carlauncher.common.theme.TLinearLayout>
@@ -492,7 +492,7 @@
         android:contentDescription="@string/app_name"
         android:focusable="true"
         android:padding="10dp"
-        android:src="@mipmap/ic_back"
+        app:srcCompat="@mipmap/ic_back"
         app:layout_heightPercent="10%h"
         app:layout_widthPercent="10%h" />
 </com.wow.carlauncher.common.theme.TRelativeLayout>

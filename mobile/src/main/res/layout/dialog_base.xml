@@ -33,7 +33,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="8dp"
             android:padding="5dp"
-            android:src="@mipmap/dialog_cancel" />
+            app:srcCompat="@mipmap/dialog_cancel" />
     </com.zhy.android.percent.support.PercentRelativeLayout>
 
     <RelativeLayout

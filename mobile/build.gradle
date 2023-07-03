@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
     defaultConfig {
         applicationId "com.wow.carlauncher"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 33
         versionCode 2011007
         versionName "2.011"
         //规则就是前4位是2.009,后面三位是小版本
@@ -43,16 +43,24 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    namespace 'com.wow.carlauncher'
 }
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.squareup.okhttp3:okhttp:3.12.0'
     //网络请求
-    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.google.code.gson:gson:2.8.9'
     //json解析
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
-    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    //implementation 'com.google.android.material:material:1.9.0'
+    //implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //androidTestImplementation 'androidx.annotation:annotation:1.6.0'
+    //implementation 'com.android.support:support-annotations:33.0.0'
     //百分比布局
     implementation 'com.zhy:percent-support-extends:1.1.1'
     //蓝牙
@@ -64,19 +72,19 @@ dependencies {
     //图片加载
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     //权限检查
-    implementation 'com.github.goweii:AnyPermission:1.1.0'
+    implementation 'com.github.goweii:AnyPermission:1.1.2'
     //动画
     implementation 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:2.0.24'
 
 //    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-21'
-    //noinspection GradleDependency
-    implementation 'com.jakewharton:butterknife:8.8.1'
+
+    implementation 'com.jakewharton:butterknife:10.2.3'
     // skin-support 基础控件支持这里不能用新版本,新版本是给androidX准备的
     //noinspection GradleDependency
     implementation 'skin.support:skin-support:3.1.1'
     //视图注入
-    //noinspection GradleDependency
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
     //编译视图注入,效率提高
     annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.1.1'
     //编译事件总线,效率提高

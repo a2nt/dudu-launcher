@@ -1,18 +1,19 @@
 package com.wow.carlauncher.view.base;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.LayoutRes;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.wow.carlauncher.R;
 import com.wow.carlauncher.common.TaskExecutor;
@@ -27,7 +28,7 @@ import butterknife.ButterKnife;
 /**
  * Created by 10124 on 2017/10/26.
  */
-public abstract class BaseActivity extends Activity {
+public abstract class BaseActivity extends AppCompatActivity {
     protected BaseActivity mContext;
     private int conRes = 0;//内容资源文件
     private RelativeLayout content;

@@ -21,7 +21,7 @@
             android:layout_margin="0.5dp"
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
-            android:src="@drawable/theme_amap_moren" />
+            app:srcCompat="@drawable/theme_amap_moren" />
 
         <com.wow.carlauncher.common.theme.TRelativeLayout
             android:layout_width="match_parent"
@@ -136,7 +136,7 @@
                                 android:id="@+id/iv_dh"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
-                                android:src="@drawable/theme_amap_amap"
+                                app:srcCompat="@drawable/theme_amap_amap"
                                 app:layout_heightPercent="60%h"
                                 app:layout_widthPercent="60%h" />
                         </com.wow.carlauncher.common.theme.TLinearLayout>
@@ -160,7 +160,7 @@
                             android:id="@+id/iv_dh_j"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:src="@drawable/theme_amap_jia"
+                            app:srcCompat="@drawable/theme_amap_jia"
                             app:layout_heightPercent="60%h"
                             app:layout_widthPercent="60%h" />
                     </com.wow.carlauncher.common.theme.TLinearLayout>
@@ -183,7 +183,7 @@
                             android:id="@+id/iv_dh_gs"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:src="@drawable/theme_amap_gongsi"
+                            app:srcCompat="@drawable/theme_amap_gongsi"
                             app:layout_heightPercent="60%h"
                             app:layout_widthPercent="60%h" />
                     </com.wow.carlauncher.common.theme.TLinearLayout>
@@ -203,7 +203,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/theme_amap_road1"
+                    app:srcCompat="@drawable/theme_amap_road1"
                     app:layout_heightPercent="80%h"
                     app:layout_marginTopPercent="15%h"
                     app:layout_widthPercent="75%h" />
@@ -213,7 +213,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/theme_amap_car"
+                    app:srcCompat="@drawable/theme_amap_car"
                     app:layout_heightPercent="34%h"
                     app:layout_marginTopPercent="50%h"
                     app:layout_widthPercent="34%h" />
@@ -253,7 +253,7 @@
                     android:layout_height="0dp"
                     android:layout_centerInParent="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/hud_sou9"
+                    app:srcCompat="@drawable/hud_sou9"
                     app:layout_heightPercent="70%h"
                     app:layout_widthPercent="70%h" />
             </com.wow.carlauncher.common.theme.TRelativeLayout>
@@ -400,7 +400,7 @@
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:src="@drawable/theme_amap_close"
+                        app:srcCompat="@drawable/theme_amap_close"
                         app:layout_heightPercent="60%h"
                         app:layout_widthPercent="60%h" />
                 </com.wow.carlauncher.common.theme.TLinearLayout>
@@ -418,7 +418,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/theme_amap_road1"
+                app:srcCompat="@drawable/theme_amap_road1"
                 app:layout_heightPercent="80%h"
                 app:layout_marginTopPercent="15%h"
                 app:layout_widthPercent="75%h" />
@@ -428,7 +428,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/theme_amap_car"
+                app:srcCompat="@drawable/theme_amap_car"
                 app:layout_heightPercent="34%h"
                 app:layout_marginTopPercent="50%h"
                 app:layout_widthPercent="34%h" />

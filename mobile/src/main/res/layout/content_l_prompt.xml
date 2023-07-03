@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/theme_prompt_location"
+            app:srcCompat="@drawable/theme_prompt_location"
             android:visibility="gone"
             app:layout_widthPercent="100%h" />
 
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/theme_prompt_tp"
+            app:srcCompat="@drawable/theme_prompt_tp"
             android:visibility="gone"
             app:layout_widthPercent="100%h" />
 
@@ -46,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/theme_prompt_obd"
+            app:srcCompat="@drawable/theme_prompt_obd"
             android:visibility="gone"
             app:layout_widthPercent="100%h" />
 
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/theme_prompt_fk"
+            app:srcCompat="@drawable/theme_prompt_fk"
             android:visibility="gone"
             app:layout_widthPercent="100%h" />
 
@@ -64,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/theme_prompt_wifi"
+            app:srcCompat="@drawable/theme_prompt_wifi"
             android:visibility="gone"
             app:layout_widthPercent="100%h" />
 
@@ -73,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/theme_prompt_mount"
+            app:srcCompat="@drawable/theme_prompt_mount"
             android:visibility="gone"
             app:layout_widthPercent="100%h" />
 
@@ -82,7 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/theme_prompt_set"
+            app:srcCompat="@drawable/theme_prompt_set"
             app:layout_widthPercent="100%h" />
 
         <com.wow.carlauncher.common.theme.TLinearLayout

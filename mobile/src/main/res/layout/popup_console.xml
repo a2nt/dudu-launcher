@@ -69,7 +69,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:contentDescription="@string/iv_main_dock_icon"
-                    android:src="@drawable/theme_add_app"
+                    app:srcCompat="@drawable/theme_add_app"
                     app:layout_heightPercent="80%h"
                     app:layout_widthPercent="80%h" />
 
@@ -88,7 +88,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:contentDescription="@string/iv_main_dock_icon"
-                    android:src="@drawable/theme_add_app"
+                    app:srcCompat="@drawable/theme_add_app"
                     app:layout_heightPercent="80%h"
                     app:layout_widthPercent="80%h" />
             </com.wow.carlauncher.common.theme.TLinearLayout>
@@ -106,7 +106,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:contentDescription="@string/iv_main_dock_icon"
-                    android:src="@drawable/theme_add_app"
+                    app:srcCompat="@drawable/theme_add_app"
                     app:layout_heightPercent="80%h"
                     app:layout_widthPercent="80%h" />
             </com.wow.carlauncher.common.theme.TLinearLayout>
@@ -124,7 +124,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:contentDescription="@string/iv_main_dock_icon"
-                    android:src="@drawable/theme_add_app"
+                    app:srcCompat="@drawable/theme_add_app"
                     app:layout_heightPercent="80%h"
                     app:layout_widthPercent="80%h" />
             </com.wow.carlauncher.common.theme.TLinearLayout>
@@ -182,7 +182,7 @@
                         android:id="@+id/music_iv_prew"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:src="@drawable/theme_ic_prev2"
+                        app:srcCompat="@drawable/theme_ic_prev2"
                         app:layout_heightPercent="50%h"
                         app:layout_widthPercent="50%h" />
                 </com.wow.carlauncher.common.theme.TLinearLayout>
@@ -214,7 +214,7 @@
                         android:id="@+id/music_iv_next"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:src="@drawable/theme_ic_next2"
+                        app:srcCompat="@drawable/theme_ic_next2"
                         app:layout_heightPercent="50%h"
                         app:layout_widthPercent="50%h" />
                 </com.wow.carlauncher.common.theme.TLinearLayout>

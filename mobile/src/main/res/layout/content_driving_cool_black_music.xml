@@ -35,7 +35,7 @@
                 android:id="@+id/iv_prew"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:src="@mipmap/ic_prev2_b"
+                app:srcCompat="@mipmap/ic_prev2_b"
                 app:layout_heightPercent="50%h"
                 app:layout_widthPercent="50%h" />
         </com.wow.carlauncher.common.theme.TLinearLayout>
@@ -51,7 +51,7 @@
                 android:id="@+id/iv_play"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:src="@mipmap/ic_play2_b"
+                app:srcCompat="@mipmap/ic_play2_b"
                 app:layout_heightPercent="55%h"
                 app:layout_widthPercent="55%h" />
         </com.wow.carlauncher.common.theme.TLinearLayout>
@@ -67,7 +67,7 @@
                 android:id="@+id/iv_next"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:src="@mipmap/ic_next2_b"
+                app:srcCompat="@mipmap/ic_next2_b"
                 app:layout_heightPercent="50%h"
                 app:layout_widthPercent="50%h" />
         </com.wow.carlauncher.common.theme.TLinearLayout>

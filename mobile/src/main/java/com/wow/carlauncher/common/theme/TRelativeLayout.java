@@ -1,7 +1,7 @@
 package com.wow.carlauncher.common.theme;
 
 import android.content.Context;
-import android.support.annotation.DrawableRes;
+import androidx.annotation.DrawableRes;
 import android.util.AttributeSet;
 
 import com.zhy.android.percent.support.PercentRelativeLayout;

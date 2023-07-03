@@ -1,17 +1,21 @@
 package com.wow.carlauncher.view.activity.launcher.view;
 
-import android.app.Activity;
+import static com.wow.carlauncher.common.CommonData.MINUTE_MILL;
+import static com.wow.carlauncher.common.CommonData.SDATA_SHOW_USB_MOUNT;
+
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.wow.carlauncher.R;
 import com.wow.carlauncher.common.AppContext;
@@ -48,9 +52,6 @@ import java.util.Date;
 import butterknife.BindView;
 import butterknife.OnClick;
 import butterknife.OnLongClick;
-
-import static com.wow.carlauncher.common.CommonData.MINUTE_MILL;
-import static com.wow.carlauncher.common.CommonData.SDATA_SHOW_USB_MOUNT;
 
 /**
  * Created by 10124 on 2018/4/22.
@@ -258,8 +259,8 @@ public class LPromptView extends BaseThemeView {
         }
     }
 
-    private Activity getActivity() {
-        return (Activity) getContext();
+    private AppCompatActivity getActivity() {
+        return (AppCompatActivity) getContext();
     }
 
     private long cur_min = 0L;

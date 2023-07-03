@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/st_bg"
         android:gravity="center_vertical"
-        android:minHeight="?android:listPreferredItemHeight"
+        android:minHeight="?attr/listPreferredItemHeight"
         android:orientation="horizontal"
         android:padding="16dp">
 

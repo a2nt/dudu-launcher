@@ -9,14 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@mipmap/driving_black_speed_oil_cursor" />
+        app:srcCompat="@mipmap/driving_black_speed_oil_cursor" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/app_name"
         android:scaleType="fitXY"
-        android:src="@mipmap/driving_black_speed_bg" />
+        app:srcCompat="@mipmap/driving_black_speed_bg" />
 
     <ImageView
         android:id="@+id/iv_cursor"
@@ -24,7 +24,7 @@
         android:layout_height="match_parent"
         android:contentDescription="@string/app_name"
         android:scaleType="fitXY"
-        android:src="@mipmap/driving_black_speed_cursor" />
+        app:srcCompat="@mipmap/driving_black_speed_cursor" />
 
     <com.wow.carlauncher.common.theme.TRelativeLayout
         android:layout_width="match_parent"

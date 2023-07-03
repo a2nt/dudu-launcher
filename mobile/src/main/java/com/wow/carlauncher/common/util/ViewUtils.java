@@ -1,6 +1,5 @@
 package com.wow.carlauncher.common.util;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
 import android.util.DisplayMetrics;
@@ -10,6 +9,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.GridView;
 import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ViewUtils {
 
@@ -130,7 +131,7 @@ public class ViewUtils {
         gv_record.setNumColumns(dataSize);
     }
 
-    public static void backgroundAlpha(Activity activity, float bgAlpha) {
+    public static void backgroundAlpha(AppCompatActivity activity, float bgAlpha) {
         WindowManager.LayoutParams lp = activity.getWindow().getAttributes();
         lp.alpha = bgAlpha; //0.0-1.0
         activity.getWindow().setAttributes(lp);
@@ -143,7 +144,7 @@ public class ViewUtils {
         return outMetrics;
     }
 
-    public static void setBrightness(Activity activity, int brightness) {
+    public static void setBrightness(AppCompatActivity activity, int brightness) {
         WindowManager.LayoutParams lp = activity.getWindow().getAttributes();
         lp.screenBrightness = Float.valueOf(brightness) * (1f / 255f);
         activity.getWindow().setAttributes(lp);
@@ -196,7 +197,7 @@ public class ViewUtils {
         return null;
     }
 
-    public static void enterFullScreen(Activity activity) {
+    public static void enterFullScreen(AppCompatActivity activity) {
         int flags = View.SYSTEM_UI_FLAG_LOW_PROFILE | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             flags |= View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN // 让View全屏显示，Layout会被拉伸到StatusBar下面，不包含NavigationBar。
@@ -214,7 +215,7 @@ public class ViewUtils {
         activity.getWindow().getDecorView().setSystemUiVisibility(flags);
     }
 
-    public static void exitFullScreen(Activity activity) {
+    public static void exitFullScreen(AppCompatActivity activity) {
         int flags = View.SYSTEM_UI_FLAG_VISIBLE;
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {

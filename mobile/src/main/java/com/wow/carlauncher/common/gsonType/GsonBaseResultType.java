@@ -1,6 +1,6 @@
 package com.wow.carlauncher.common.gsonType;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.wow.carlauncher.repertory.server.response.BaseResult;
 

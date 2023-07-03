@@ -1,7 +1,7 @@
 package com.wow.carlauncher.view.activity.set.setComponent;
 
 import android.annotation.SuppressLint;
-import android.support.v7.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.view.WindowManager;
 
 import com.wow.carlauncher.R;

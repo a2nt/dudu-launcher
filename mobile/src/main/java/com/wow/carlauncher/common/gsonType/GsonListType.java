@@ -1,6 +1,6 @@
 package com.wow.carlauncher.common.gsonType;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
